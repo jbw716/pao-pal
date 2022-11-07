@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAO-PAL</title>
+    <link rel="icon" href="https://pao-pal-site.herokuapp.com/pao-head.png">
+    <style>
+        body {
+            background-image: url("Background.png");
+            /* background-repeat: repeat; */
+            background-repeat: repeat;
+            /* background-position: right center, left center; */
+            background-size: 10%;
+            margin-top: 2%;
+        }
+        h1 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            text-transform: uppercase;
+            cursor: default;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        iframe {
+            display: block;
+            margin: auto;
+            padding-bottom: 2%;
+        }
+        table {
+            width: 100%;
+            margin: auto;
+        }
+        td {
+            width: 33%;
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+        .pao {
+            animation: left-rotation 2s infinite linear;
+            animation-delay: 0.1s;
+        }
+        @keyframes left-rotation {
+            from {
+                    transform: rotate(360deg);
+            }
+            to {
+                    transform: rotate(1deg);
+            }
+        }
+        .gdoc {
+            animation: right-rotation 2.1s infinite linear;
+            animation-delay: 0.3s;
+        }
+        @keyframes right-rotation {
+            from {
+                    transform: rotate(0deg);
+            }
+            to {
+                    transform: rotate(359deg);
+            }
+        }
+        /* .title   {
+            text-align: center;
+            font-size: 150px;
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-animation: blink 1s step-end infinite;
+		            animation: blink 1s step-end infinite;
+        } */
+        .title {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 125px;
+        }
+        .spooky {
+            height: 140px;
+            left: 0;
+            letter-spacing: 5px;
+            width: 100%;
+            animation: move linear 2000ms infinite;  
+        }
+
+        @keyframes move {
+            0% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            25% {    
+                text-shadow:      
+                -4px -4px 0 hsla(180, 100%, 50%, 1), 
+                -3px -3px 0 hsla(180, 100%, 50%, 1), 
+                -2px -2px 0 hsla(180, 100%, 50%, 1), 
+                -1px -1px 0 hsla(180, 100%, 50%, 1),
+                4px 4px 0 hsla(0, 100%, 50%, 1), 
+                3px 3px 0 hsla(0, 100%, 50%, 1), 
+                2px 2px 0 hsla(0, 100%, 50%, 1), 
+                1px 1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            50% {
+                text-shadow:
+                -4px 4px 0 hsla(0, 100%, 50%, 1), 
+                -3px 3px 0 hsla(0, 100%, 50%, 1), 
+                -2px 2px 0 hsla(0, 100%, 50%, 1), 
+                -1px 1px 0 hsla(0, 100%, 50%, 1),
+                4px -4px 0 hsla(180, 100%, 50%, 1), 
+                3px -3px 0 hsla(180, 100%, 50%, 1), 
+                2px -2px 0 hsla(180, 100%, 50%, 1), 
+                1px -1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            75% {
+                text-shadow:
+                4px 4px 0 hsla(180, 100%, 50%, 1), 
+                3px 3px 0 hsla(180, 100%, 50%, 1), 
+                2px 2px 0 hsla(180, 100%, 50%, 1), 
+                1px 1px 0 hsla(180, 100%, 50%, 1),
+                -4px -4px 0 hsla(0, 100%, 50%, 1), 
+                -3px -3px 0 hsla(0, 100%, 50%, 1), 
+                -2px -2px 0 hsla(0, 100%, 50%, 1), 
+                -1px -1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            100% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+        }
+         .cost   {
+            text-align: center;
+            font-size: 80px;
+            color: yellow;
+            padding: 0;
+            margin: 0;
+         }
+         .blink {
+            -webkit-animation: blink 2s step-end infinite;
+                animation: blink 2s step-end infinite;
+         }
+         .s_h{
+             color: blue;
+             text-align: center;
+             padding: 0;
+             margin: 0;
+         }
+		@-webkit-keyframes blink { 75% { visibility: hidden; }}
+		        @keyframes blink { 75% { visibility: hidden; }}
+
+        .price-border {
+            background: yellow;
+            width: 320px;
+            height: 320px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 0;
+        }
+        .price-border:before, .price-border:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 320px;
+            width: 320px;
+            background: yellow;
+        }
+        .price-border:before {
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                -o-transform: rotate(30deg);
+        }
+        .price-border:after {
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+                -ms-transform: rotate(60deg);
+                -o-transform: rotate(60deg);
+        }
+
+        .price-border2 {
+            transform: rotate(15deg)
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <!-- <div style="position: relative;">
+                    <div style="position: absolute; top: -150px; left: 25%; z-index: 99;">
+                        <div class="price-border"></div>
+                        <div class="price-border price-border2"></div>
+                    </div>
+                    <img style="width: 50%; z-index: 100; position: absolute; top: -200px; left: 25%;" class="pao" src="pao-head.png"/>
+                </div> -->
+                <div>
+                    <img style="width: 50%;" class="pao" src="pao-head.png"/>
+                </div>
+            </td>
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fpL5IKaqVqM?controls=0&autoplay=1&disablekb=1&modestbranding=1&rel=0&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+            <td>
+                <div style="width: 100%; position: relative;">
+                    <img style="width: 75%; position: absolute; margin: auto; z-index: 2; top: -10%; right: 12%;" src="cross-out.png"/>
+                    <img class="gdoc" style="width: 50%; z-index: 1;" src="gdoc-head.png"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- <div style="position: relative;">
+        <h1 class="title blink">Pao-Pal.com!!!</h1>
+        <div style="position: absolute; top: 5%; right: 18%; z-index: 99;">
+            <div class="price-border"></div>
+            <div class="price-border price-border2" style="position: absolute; top: 5%; right: 5%;"></div>
+            <h1 class="blink" style="z-index: 100; position: absolute; color: red; transform: rotate(20deg); top: -10px; right: -20px;">$419 Earth Dollars!</h1>
+        </div>
+    </div> -->
+
+    <h1 class="title blink">Pao-Pal.com!!!</h1>
+    <h1 class="cost spooky">Only $419 Earth Dollars!</h1>
+    <h1 class="s_h">Plus Shipping and Handling</h1>
+
+</body>
+</html>
